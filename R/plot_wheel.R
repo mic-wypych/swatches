@@ -1,5 +1,13 @@
-
-# color wheel
+#' Plot a color palette on color wheel
+#'
+#' @param palette A character vector with colors in hex
+#'
+#' @return A ggplot object
+#' @export
+#'
+#' @examples
+#' x <- c("FF0000", "#00FFFF", "#0000FF")
+#' plot_wheel(x)
 
 
 plot_wheel <- function(palette) {

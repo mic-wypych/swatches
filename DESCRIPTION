@@ -15,3 +15,4 @@ Imports:
     ggfittext,
     ggplot2,
     tidyr
+RoxygenNote: 7.3.2

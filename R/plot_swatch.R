@@ -1,11 +1,18 @@
+#' Plot a color swatch from hex
+#'
+#' @param palette A character vector with colors in hex
+#' @param nrow Number of rows to display the palette in
+#'
+#' @return A ggplot object
+#' @export
+#'
+#' @examples
+#' x <- c("FF0000", "#00FFFF", "#0000FF")
+#' plot_swatch(x)
+
+
+
 plot_swatch <- function(palette, nrow = 1) {
-  require(ggplot2)
-  require(dplyr)
-  require(tidyr)
-  require(forcats)
-  require(ggfittext)
-  require(glue)
-  require(colorspace)
 
   stopifnot(is.vector(palette))
 
