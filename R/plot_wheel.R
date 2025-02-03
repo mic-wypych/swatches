@@ -11,18 +11,14 @@
 
 
 plot_wheel <- function(palette) {
-  require(ggplot2)
-  require(dplyr)
-  require(tidyr)
-  require(colorspace)
 
   palette_df <- data.frame(hex = palette) |>
     mutate(id = row_number()) |>
-    bind_cols(
+    cbind(
       as.data.frame(colorspace::hex2RGB(palette)@coords)) # Normalize to [0,1]
 
   palette_df <- palette_df |>
-    bind_cols(
+    cbind(
       rgb2hsv(palette_df$R, palette_df$G, palette_df$B) |>
         t() |>
         as.data.frame()

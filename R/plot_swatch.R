@@ -18,10 +18,10 @@ plot_swatch <- function(palette, nrow = 1) {
 
   palette_df <- data.frame(hex = palette) |>
     mutate(id = row_number()) |>
-    bind_cols(as.data.frame(colorspace::hex2RGB(palette)@coords))
+    cbind(as.data.frame(colorspace::hex2RGB(palette)@coords))
 
   palette_df <- palette_df |>
-    bind_cols(
+    cbind(
       rgb2hsv(palette_df$R, palette_df$G, palette_df$B) |>
         t() |>
         as.data.frame()
