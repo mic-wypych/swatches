@@ -12,7 +12,7 @@
 #' @import ggfittext
 ## usethis namespace: end
 #' @examples
-#' x <- c("FF0000", "#00FFFF", "#0000FF")
+#' x <- c("#FF0000", "#00FFFF", "#0000FF")
 #' plot_wheel(x)
 
 
