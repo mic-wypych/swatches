@@ -13,6 +13,7 @@ Imports:
     dplyr,
     forcats,
     ggfittext,
+    colorspace,
     ggplot2,
     tidyr
 RoxygenNote: 7.3.2
