@@ -10,6 +10,8 @@
 #' @import colorspace
 #' @import forcats
 #' @import ggfittext
+#' @import tidyr
+#' @import glue
 ## usethis namespace: end
 #' @examples
 #' x <- c("#FF0000", "#00FFFF", "#0000FF")
