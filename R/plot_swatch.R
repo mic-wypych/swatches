@@ -5,7 +5,12 @@
 #'
 #' @return A ggplot object
 #' @export
-#'
+#' 
+#' @import ggplot2
+#' @import dplyr
+#' @import colorspace
+#' @import forcats
+#' @import ggfittext
 #' @examples
 #' x <- c("FF0000", "#00FFFF", "#0000FF")
 #' plot_swatch(x)

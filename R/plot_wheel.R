@@ -5,11 +5,11 @@
 #' @return A ggplot object
 #' @export
 #'
-#' 
-#' The following block is used by usethis to automatically manage
-# roxygen namespace tags. Modify with care!
-## usethis namespace: start
 #' @import ggplot2
+#' @import dplyr
+#' @import colorspace
+#' @import forcats
+#' @import ggfittext
 ## usethis namespace: end
 #' @examples
 #' x <- c("FF0000", "#00FFFF", "#0000FF")
