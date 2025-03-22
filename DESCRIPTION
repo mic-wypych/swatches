@@ -15,5 +15,6 @@ Imports:
     ggfittext,
     colorspace,
     ggplot2,
-    tidyr
+    tidyr,
+    glue
 RoxygenNote: 7.3.2

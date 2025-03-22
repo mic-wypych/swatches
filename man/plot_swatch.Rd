@@ -18,6 +18,6 @@ A ggplot object
 Plot a color swatch from hex
 }
 \examples{
-x <- c("FF0000", "#00FFFF", "#0000FF")
+x <- c("#FF0000", "#00FFFF", "#0000FF")
 plot_swatch(x)
 }

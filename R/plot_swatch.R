@@ -13,9 +13,10 @@
 #' @import ggfittext
 #' @import tidyr
 #' @import glue
+#' @importFrom grDevices rgb2hsv
 #' 
 #' @examples
-#' x <- c("FF0000", "#00FFFF", "#0000FF")
+#' x <- c("#FF0000", "#00FFFF", "#0000FF")
 #' plot_swatch(x)
 
 

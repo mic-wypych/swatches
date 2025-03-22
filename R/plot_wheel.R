@@ -12,6 +12,7 @@
 #' @import ggfittext
 #' @import tidyr
 #' @import glue
+#' @importFrom grDevices rgb2hsv
 ## usethis namespace: end
 #' @examples
 #' x <- c("#FF0000", "#00FFFF", "#0000FF")
@@ -27,7 +28,7 @@ plot_wheel <- function(palette) {
 
   palette_df <- palette_df |>
     cbind(
-      colorspace::rgb2hsv(palette_df$R, palette_df$G, palette_df$B) |>
+      rgb2hsv(palette_df$R, palette_df$G, palette_df$B) |>
         t() |>
         as.data.frame()
     )
