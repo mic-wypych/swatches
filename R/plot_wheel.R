@@ -5,6 +5,12 @@
 #' @return A ggplot object
 #' @export
 #'
+#' 
+#' The following block is used by usethis to automatically manage
+# roxygen namespace tags. Modify with care!
+## usethis namespace: start
+#' @import ggplot2
+## usethis namespace: end
 #' @examples
 #' x <- c("FF0000", "#00FFFF", "#0000FF")
 #' plot_wheel(x)
@@ -13,13 +19,13 @@
 plot_wheel <- function(palette) {
 
   palette_df <- data.frame(hex = palette) |>
-    mutate(id = row_number()) |>
+    dplyr::mutate(id = row_number()) |>
     cbind(
       as.data.frame(colorspace::hex2RGB(palette)@coords)) # Normalize to [0,1]
 
   palette_df <- palette_df |>
     cbind(
-      rgb2hsv(palette_df$R, palette_df$G, palette_df$B) |>
+      colorspace::rgb2hsv(palette_df$R, palette_df$G, palette_df$B) |>
         t() |>
         as.data.frame()
     )
@@ -36,8 +42,8 @@ plot_wheel <- function(palette) {
 
 
 
-  palette_df %>%
-    ggplot(aes(x = h, y = s, color = hex)) +
+  palette_df |>
+    ggplot2::ggplot(aes(x = h, y = s, color = hex)) +
     geom_point(size = 7) +
     geom_rect(data = color_data, aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax, fill = color), inherit.aes = FALSE) +
     scale_fill_identity() +
