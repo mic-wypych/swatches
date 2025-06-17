@@ -1,0 +1,54 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# swatches
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of swatches is to give basic functions for displaying color palettes on color wheel and as swatches
+
+## Installation
+
+You can install the development version of swatches from [GitHub](https://github.com/) with:
+
+``` {r, eval=FALSE}
+# install.packages("remotes")
+remotes::install_github("mic-wypych/swatches")
+```
+
+## Examples
+
+You can plot a colorwheel of a palette like this:
+
+```{r example}
+library(swatches)
+
+pal <- c("#90e0ef", "#48cae4", "#0096c7", "#023e8a")
+plot_wheel(pal)
+
+```
+
+```{r example2}
+library(swatches)
+
+pal <- c("#90e0ef", "#48cae4", "#0096c7", "#023e8a")
+plot_swatch(pal)
+
+```
+
+
+
+
