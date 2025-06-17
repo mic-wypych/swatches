@@ -5,9 +5,18 @@
 #'
 #' @return A ggplot object
 #' @export
-#'
+#' 
+#' @import ggplot2
+#' @import dplyr
+#' @import colorspace
+#' @import forcats
+#' @import ggfittext
+#' @import tidyr
+#' @import glue
+#' @importFrom grDevices rgb2hsv hsv
+#' 
 #' @examples
-#' x <- c("FF0000", "#00FFFF", "#0000FF")
+#' x <- c("#FF0000", "#00FFFF", "#0000FF")
 #' plot_swatch(x)
 
 

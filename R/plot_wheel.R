@@ -5,14 +5,17 @@
 #' @return A ggplot object
 #' @export
 #'
-#' 
-#' The following block is used by usethis to automatically manage
-# roxygen namespace tags. Modify with care!
-## usethis namespace: start
 #' @import ggplot2
+#' @import dplyr
+#' @import colorspace
+#' @import forcats
+#' @import ggfittext
+#' @import tidyr
+#' @import glue
+#' @importFrom grDevices rgb2hsv
 ## usethis namespace: end
 #' @examples
-#' x <- c("FF0000", "#00FFFF", "#0000FF")
+#' x <- c("#FF0000", "#00FFFF", "#0000FF")
 #' plot_wheel(x)
 
 
@@ -25,7 +28,7 @@ plot_wheel <- function(palette) {
 
   palette_df <- palette_df |>
     cbind(
-      colorspace::rgb2hsv(palette_df$R, palette_df$G, palette_df$B) |>
+      rgb2hsv(palette_df$R, palette_df$G, palette_df$B) |>
         t() |>
         as.data.frame()
     )
