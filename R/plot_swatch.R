@@ -13,7 +13,7 @@
 #' @import ggfittext
 #' @import tidyr
 #' @import glue
-#' @importFrom grDevices rgb2hsv
+#' @importFrom grDevices rgb2hsv hsv
 #' 
 #' @examples
 #' x <- c("#FF0000", "#00FFFF", "#0000FF")
